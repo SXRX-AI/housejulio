@@ -1,0 +1,175 @@
+/* General */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+  background-image: url(../IMG/cool-background.png);
+  background-size: cover;
+  background-position: center;
+  color: #111;
+  margin: 0;
+  padding: 0;
+}
+
+/* Encabezado */
+header {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+.encabezado h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0.5rem 0;
+  letter-spacing: 3px;
+}
+
+.encabezado h2 {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.encabezado p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Producto */
+main {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.producto {
+  background: #fff;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.producto h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.producto h3 {
+  font-weight: 400;
+  color: #333;
+}
+
+/* Carrusel */
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 2rem;
+  border-radius: 10px;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.slider img {
+  width: 100%;
+  height: 400px; /* Altura ideal para escritorio */
+  object-fit: cover;
+  border: 2px solid black;
+  display: block;
+  border-radius: 10px;
+}
+
+
+/* Botones carrusel */
+.prev, .next {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  font-size: 24px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Footer */
+#footer {
+    clear: both;
+    padding-top: 20px;
+    border: 2px solid rgb(231, 227, 227);
+    border-radius: 20px;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    backdrop-filter: blur(20px);
+}
+
+#redes {
+    margin-top: 15px;
+}
+
+#redes a {
+    padding: 5px;
+    font-size: 30px;
+    color: white;
+    margin: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+#redes a i:hover {
+    color: #f5f4f7;
+    transform: scale(1.2);
+}
+
+/* WhatsApp flotante */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+}
+.whatsapp-float img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s;
+}
+.whatsapp-float img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .encabezado h1 {
+    font-size: 2rem;
+  }
+  .producto h1 {
+    font-size: 1.7rem;
+  }
+  .slider img {
+    height: 250px; /* Más bajo en celular */;
+  }
+  .prev, .next {
+    font-size: 18px;
+    padding: 8px;
+  }
+}
